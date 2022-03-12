@@ -6,11 +6,16 @@ class ChitterView {
     this.mainContainerEl = document.querySelector('#main-container');
 
     this.submitButtonEl = document.querySelector('#submit-button');
+    this.deleteButtonEl = document.querySelector('#delete-button')
     
     //const peepInputEl = document.querySelector('#peep-input');
 
     this.submitButtonEl.addEventListener('click', () => {
       this.display();
+
+    this.deleteButtonEl.addEventListener('click', () => {
+      this.hidePeep();
+    })
 
       // this.api.getRepoInfo(repoName, repoData => {
       //   console.log(repoData);
@@ -26,6 +31,11 @@ class ChitterView {
     d.innerText = textEl.value
     this.mainContainerEl.append(d);
 
+  }
+
+  hidePeep(){
+    let d = document.getElementById('peep')
+    d.remove()
   }
 }
 

@@ -11,8 +11,12 @@
           this.model = model;
           this.mainContainerEl = document.querySelector("#main-container");
           this.submitButtonEl = document.querySelector("#submit-button");
+          this.deleteButtonEl = document.querySelector("#delete-button");
           this.submitButtonEl.addEventListener("click", () => {
             this.display();
+            this.deleteButtonEl.addEventListener("click", () => {
+              this.hidePeep();
+            });
           });
         }
         display() {
@@ -22,6 +26,11 @@
           d.setAttribute("id", "peep");
           d.innerText = textEl.value;
           this.mainContainerEl.append(d);
+        }
+        hidePeep() {
+          // et d = document.getElementById("peep");
+          // d.remove();
+          this.mainContainerEl.remove('peep')
         }
       };
       module.exports = ChitterView2;
