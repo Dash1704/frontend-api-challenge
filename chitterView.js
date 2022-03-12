@@ -1,7 +1,7 @@
 class ChitterView {
   constructor(model) {
     this.model = model;
-    //this.api = api;
+    this.api = api;
     //model, api << put these in brackets after constructor
     this.mainContainerEl = document.querySelector('#main-container');
 

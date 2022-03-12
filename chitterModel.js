@@ -1,23 +1,23 @@
-// class ChitterModel {
-//   constructor() {
-//     this.repoInfo = null
-//   }
+class ChitterModel {
+  constructor() {
+    this.peeps = []
+  }
 
   
-//   setPeeps(){
+  addPeeps(peep){
+    this.peeps.push(peep);
+  }
 
-//   }
+  displayPeeps(){
 
-//   displayPeeps(){
+  }
 
-//   }
+  getPeeps(){
+    return this.peeps
+  }
+}
 
-//   getPeeps(){
-
-//   }
-// }
-
-// module.exports = ChitterModel;
+module.exports = ChitterModel;
 
 
 

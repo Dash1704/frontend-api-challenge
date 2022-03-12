@@ -9,6 +9,7 @@
       var ChitterView2 = class {
         constructor(model) {
           this.model = model;
+          this.api = api;
           this.mainContainerEl = document.querySelector("#main-container");
           this.submitButtonEl = document.querySelector("#submit-button");
           this.deleteButtonEl = document.querySelector("#delete-button");
@@ -28,9 +29,8 @@
           this.mainContainerEl.append(d);
         }
         hidePeep() {
-          // et d = document.getElementById("peep");
-          // d.remove();
-          this.mainContainerEl.remove('peep')
+          let d = document.getElementById("peep");
+          d.remove();
         }
       };
       module.exports = ChitterView2;
